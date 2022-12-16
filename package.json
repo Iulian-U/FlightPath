@@ -10,5 +10,9 @@
   "devDependencies": {
     "nuxt": "3.0.0",
     "nuxt-windicss": "^2.6.0"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.7.6",
+    "lucide-vue-next": "^0.104.0"
   }
 }

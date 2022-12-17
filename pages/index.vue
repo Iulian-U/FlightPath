@@ -15,7 +15,7 @@
 
 <style scoped>
 #app {
-  @apply w-full h-full flex flex-col bg-sky-400 dark: bg-sky-800 transition-colors;
+  @apply w-full h-full flex flex-col bg-sky-400 dark: bg-dark-[#0C0E10] transition-colors;
 }
 
 .content {

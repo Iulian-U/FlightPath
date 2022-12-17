@@ -53,7 +53,7 @@ import { Settings, Monitor, Sun, Moon } from "lucide-vue-next";
 
 <style scoped>
 .menu-button {
-  @apply inline-flex w-full justify-center rounded-md bg-white dark: bg-blue-600 p-3 text-base font-medium text-sky-500 dark:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75;
+  @apply inline-flex w-full justify-center rounded-md bg-white dark: bg-gray-900 dark:border dark:border-blue-800 p-3 text-base font-medium text-sky-500 dark:text-white focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75;
 }
 
 .menu-items {

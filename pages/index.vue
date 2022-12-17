@@ -4,7 +4,7 @@
 
 <template>
   <div id="app">
-    <MainNavbar />
+    <MainNavbar class="z-20" />
     <div class="content">
       <FlightTracker />
     </div>
@@ -15,7 +15,7 @@
 
 <style scoped>
 #app {
-  @apply w-full h-full flex flex-col bg-sky-400 dark: bg-dark-[#0C0E10] transition-colors;
+  @apply w-full h-full flex flex-col bg-blue-400 dark: bg-gray-900 transition-colors;
 }
 
 .content {

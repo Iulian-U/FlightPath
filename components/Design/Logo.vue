@@ -15,7 +15,7 @@ const colorMode = useColorMode();
 
 <style scoped>
 a {
-  @apply flex items-center bg-white dark: bg-blue-600 p-4 rounded-md shadow-sm h-12;
+  @apply flex items-center bg-white dark: bg-gray-900 dark:border dark:border-blue-800 p-4 rounded-md shadow-sm h-12;
 }
 
 p {

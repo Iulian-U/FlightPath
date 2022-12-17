@@ -1,3 +1,7 @@
+<script setup>
+
+</script>
+
 <template>
   <div id="app">
     <MainNavbar />
@@ -7,7 +11,7 @@
   </div>
 </template>
 
-<script setup></script>
+
 
 <style scoped>
 #app {

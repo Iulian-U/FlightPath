@@ -1,10 +1,27 @@
+<script setup>
+import WorldMapWhite from "/images/world-map-white.png";
+import WorldMapDark from "/images/world-map-dark.png";
+const colorMode = useColorMode();
+</script>
+
 <template>
-  <div>
-    <input type="text" class="rounded-lg bg-white py-2 pl-3 pr-10" />
-    <button>Track Flight</button>
+  <div id="wrapper">
+    <img
+      :src="colorMode.preference == 'light' ? WorldMapWhite : WorldMapDark"
+      alt="world-map"
+      class="bg-image"
+    />
+    <FeaturesSearchFlight />
+    <FeaturesDisplayFlight />
   </div>
 </template>
 
-<script setup></script>
+<style scoped>
+#wrapper {
+  @apply flex h-full w-full flex-col items-center justify-center;
+}
 
-<style lang="scss" scoped></style>
+#wrapper .bg-image {
+  @apply sm:top-25 absolute top-20 w-auto object-center opacity-40 dark:opacity-25;
+}
+</style>

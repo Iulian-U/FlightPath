@@ -1,6 +1,4 @@
-<script setup>
-
-</script>
+<script setup></script>
 
 <template>
   <div id="app">
@@ -11,14 +9,12 @@
   </div>
 </template>
 
-
-
 <style scoped>
 #app {
-  @apply w-full h-full flex flex-col bg-blue-400 dark: bg-gray-900 transition-colors;
+  @apply flex h-full w-full flex-col bg-blue-500 transition-colors dark:bg-gray-900;
 }
 
 .content {
-  @apply w-full h-full flex justify-center items-center;
+  @apply flex h-full w-full items-center justify-center;
 }
 </style>

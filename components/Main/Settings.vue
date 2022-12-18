@@ -57,11 +57,11 @@ import { Settings, Monitor, Sun, Moon } from "lucide-vue-next";
 }
 
 .menu-items {
-  @apply absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus: outline-none;
+  @apply dark: bg-opacity-90 blur-md bg-white dark: bg-gray-900 dark:border dark:border-blue-800 absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus: outline-none;
 }
 
 .menu-item {
-  @apply text-gray-400 hover: text-gray-600 hover: bg-light-700 transition-colors;
+  @apply text-gray-400 dark: text-white hover: text-gray-600 hover: bg-light-700 dark:hover:bg-gray-800 dark: hover:text-white transition-colors;
 }
 
 .menu-items .icon-container {

@@ -13,11 +13,11 @@ import { Search } from "lucide-vue-next";
 
 <style scoped>
 .input-container {
-  @apply relative z-10 flex w-full items-center justify-center px-2;
+  @apply relative z-10 flex w-full items-center justify-center px-4;
 }
 
 .input-container input {
-  @apply sm:w-250 sm:h-15 h-10 w-full rounded-tl-md rounded-bl-md text-center text-base shadow-md outline-none dark:border dark:border-blue-800 dark:bg-gray-900 dark:text-white sm:text-xl;
+  @apply sm:w-250 h-15 w-full rounded-tl-md rounded-bl-md text-center text-base shadow-md outline-none dark:border dark:border-blue-800 dark:bg-gray-900 dark:text-white sm:text-xl;
 }
 
 .input-container input::placeholder {
@@ -25,7 +25,7 @@ import { Search } from "lucide-vue-next";
 }
 
 .input-container .submit-button {
-  @apply w-15 sm:h-15 flex h-10 items-center justify-center rounded-tr-md rounded-br-md bg-red-400 text-white shadow-md dark:border dark:border-red-400 dark:bg-gray-900;
+  @apply w-15 h-15 flex  items-center justify-center rounded-tr-md rounded-br-md bg-red-400 text-white shadow-md dark:border dark:border-red-400 dark:bg-gray-900;
 }
 
 #wrapper .input-container .submit-button .icon {

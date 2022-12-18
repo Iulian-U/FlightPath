@@ -34,11 +34,11 @@ import { Plane } from "lucide-vue-next";
 
 <style>
 #container {
-  @apply lg:w-265 h-100 relative mt-10 flex w-full flex-col px-2 lg:px-0;
+  @apply lg:w-265 h-100 relative mt-10 flex w-full flex-col px-4 lg:px-0;
 }
 
 #header {
-  @apply flex w-full flex-col items-center justify-between rounded-none bg-white dark:border-l dark:border-t dark:border-r dark:border-blue-800 dark:bg-gray-900 dark:text-white lg:flex-row lg:rounded-tl-md lg:rounded-tr-md;
+  @apply flex w-full flex-col items-center justify-between rounded-tr-md rounded-tl-md bg-white dark:border-l dark:border-t dark:border-r dark:border-blue-800 dark:bg-gray-900 dark:text-white lg:flex-row;
 }
 
 #header h2 {
@@ -62,7 +62,7 @@ import { Plane } from "lucide-vue-next";
 }
 
 #header .airline-info {
-  @apply h-full w-full items-center rounded-none bg-gray-100 px-0 py-6 dark:bg-transparent lg:w-auto lg:items-start lg:rounded-tl-md lg:px-6 lg:py-0;
+  @apply h-full w-full items-center rounded-tl-md rounded-tr-md bg-gray-100 px-0 py-6 dark:bg-transparent lg:w-auto lg:items-start lg:rounded-tl-md lg:px-6 lg:py-0;
 }
 
 #header .travel-info {
@@ -70,7 +70,7 @@ import { Plane } from "lucide-vue-next";
 }
 
 #header .flight-status {
-  @apply w-full flex-col items-center justify-center rounded-none bg-emerald-400 px-6 py-4 dark:bg-transparent lg:w-auto lg:items-start lg:rounded-tr-md;
+  @apply w-full flex-col items-center justify-center rounded-tr-none bg-emerald-400 px-6 py-4 dark:bg-transparent lg:w-auto lg:items-start lg:rounded-tr-md;
 }
 
 #header .flight-status h2 {

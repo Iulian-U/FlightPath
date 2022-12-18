@@ -3,89 +3,85 @@ import { Plane } from "lucide-vue-next";
 </script>
 
 <template>
-    <div id="container">
-        <div id="header">
-            <div class="airline-info">
-                <h2>UA2402</h2>
-                <p>United Airlines (UA)</p>
-            </div>
+  <div id="container">
+    <div id="header">
+      <div class="airline-info">
+        <h2>UA2402</h2>
+        <p>United Airlines (UA)</p>
+      </div>
 
-            <div class="travel-info">
-                <div class="airport">
-                    <h2>LAX</h2>
-                    <p>Los Angeles Int.</p>
-                </div>
-                <Plane class="icon fly-airplane" stroke-width="1" />
-                <div class="airport">
-                    <h2>BOS</h2>
-                    <p>Logan Int.</p>
-                </div>
-
-            </div>
-            <div class="flight-status">
-                <h2>Airborne</h2>
-                <p>On Time</p>
-            </div>
+      <div class="travel-info">
+        <div class="airport">
+          <h2>LAX</h2>
+          <p>Los Angeles Int.</p>
         </div>
-        <div id="body">
-            <p>Test</p>
+        <Plane class="icon fly-airplane" stroke-width="1" />
+        <div class="airport">
+          <h2>BOS</h2>
+          <p>Logan Int.</p>
         </div>
+      </div>
+      <div class="flight-status">
+        <h2>Airborne</h2>
+        <p>On Time</p>
+      </div>
     </div>
+    <div id="body">
+      <p>Test</p>
+    </div>
+  </div>
 </template>
 
-
-
-<style scoped>
+<style>
 #container {
-    @apply relative flex flex-col mt-10 lg: w-265 w-full h-100 lg:px-0 px-2;
+  @apply lg:w-265 h-100 relative mt-10 flex w-full flex-col px-2 lg:px-0;
 }
 
 #header {
-    @apply w-full flex flex-col lg: flex-row justify-between items-center bg-white dark: text-white dark: bg-gray-900 dark:border-l dark:border-t dark:border-r dark:border-blue-800 lg:rounded-tl-md lg:rounded-tr-md rounded-none;
+  @apply flex w-full flex-col items-center justify-between rounded-none bg-white dark:border-l dark:border-t dark:border-r dark:border-blue-800 dark:bg-gray-900 dark:text-white lg:flex-row lg:rounded-tl-md lg:rounded-tr-md;
 }
 
 #header h2 {
-    @apply text-2xl font-medium text-gray-600 dark: text-white;
+  @apply text-2xl font-medium text-gray-600 dark:text-white;
 }
 
 #header p {
-    @apply text-gray-500;
+  @apply text-gray-500;
 }
 
 #header div {
-    @apply flex flex-col justify-center;
+  @apply flex flex-col justify-center;
 }
 
 #header .airport {
-    @apply items-center;
+  @apply items-center;
 }
 
-
 #header .icon {
-    @apply lg: py-0 py-4 w-7 h-7 mx-6 h-full fill-gray-700 dark: fill-white;
+  @apply mx-6 h-7 h-full w-7 fill-gray-700 py-4 dark:fill-white lg:py-0;
 }
 
 #header .airline-info {
-    @apply bg-gray-100 dark: bg-transparent h-full lg: px-6 px-0 lg:py-0 py-6 lg: w-auto w-full lg:items-start items-center lg:rounded-tl-md rounded-none;
+  @apply h-full w-full items-center rounded-none bg-gray-100 px-0 py-6 dark:bg-transparent lg:w-auto lg:items-start lg:rounded-tl-md lg:px-6 lg:py-0;
 }
 
 #header .travel-info {
-    @apply lg: py-0 py-6 lg: w-auto w-full flex flex-col lg: flex-row justify-around items-center lg:mt-0 lg:mb-0;
+  @apply w-full flex-col items-center justify-around py-6 lg:mt-0 lg:mb-0 lg:flex lg:w-auto lg:flex-row lg:py-0;
 }
 
 #header .flight-status {
-    @apply bg-emerald-400 dark: bg-transparent px-6 py-4 w-full lg: w-auto flex-col justify-center lg:items-start items-center lg:rounded-tr-md rounded-none;
+  @apply w-full flex-col items-center justify-center rounded-none bg-emerald-400 px-6 py-4 dark:bg-transparent lg:w-auto lg:items-start lg:rounded-tr-md;
 }
 
 #header .flight-status h2 {
-    @apply text-white dark: text-emerald-400;
+  @apply text-white dark:text-emerald-400;
 }
 
 #header .flight-status p {
-    @apply text-white dark: text-emerald-400;
+  @apply text-white dark:text-emerald-400;
 }
 
 #body {
-    @apply bg-white bg-opacity-30 dark: bg-opacity-5 dark:border-l dark:border-r dark:border-b dark:border-blue-800 blur-md h-40;
+  @apply bg-white bg-opacity-30 bg-opacity-5 blur-md dark:h-40 dark:border-l dark:border-r dark:border-b dark:border-blue-800;
 }
 </style>

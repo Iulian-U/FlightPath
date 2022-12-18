@@ -9,6 +9,6 @@
 
 <style scoped>
 nav {
-  @apply flex justify-between items-center px-2 h-20;
+  @apply flex h-20 items-center justify-between px-2;
 }
 </style>

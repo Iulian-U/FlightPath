@@ -17,9 +17,11 @@ const colorMode = useColorMode();
 <style scoped>
 #wrapper {
   @apply w-full h-full flex flex-col justify-center items-center;
+
+
 }
 
 #wrapper .bg-image {
-  @apply absolute w-full h-auto opacity-40 dark: opacity-25;
+  @apply absolute w-auto object-center opacity-40 dark: opacity-25 sm:top-25 top-20;
 }
 </style>

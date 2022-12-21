@@ -1,9 +1,7 @@
 <script setup>
-import logoColor from '/images/plane-logo-color.png'
-import logoWhite from '/images/plane-logo-white.png'
+import logoColor from "/images/plane-logo-color.png";
+import logoWhite from "/images/plane-logo-white.png";
 const colorMode = useColorMode();
-
-
 </script>
 
 <template>
@@ -15,11 +13,11 @@ const colorMode = useColorMode();
 
 <style scoped>
 a {
-  @apply flex items-center bg-white dark: bg-gray-900 dark:border dark:border-blue-800 p-4 rounded-md shadow-sm h-12;
+  @apply flex h-12 items-center rounded-md bg-white p-4 shadow-sm dark:border dark:border-blue-800 dark:bg-gray-900;
 }
 
 p {
-  @apply ml-1 text-2xl antialiased font-bold tracking-normal text-sky-500 dark: text-white;
+  @apply ml-1 text-2xl font-bold tracking-normal text-sky-600 antialiased dark:text-white;
 }
 
 img {

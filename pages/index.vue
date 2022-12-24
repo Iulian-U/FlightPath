@@ -1,4 +1,18 @@
-<script setup></script>
+<script setup>
+const colorMode = useColorMode();
+
+const bgLightColor = "linear-gradient(19deg, #21D4FD 0%, #B721FF 100%)";
+const bgDarkColor = "#111827";
+
+const bgURL = computed(() => {
+  return colorMode.preference == "light" ? bgLightColor : bgDarkColor;
+});
+
+watchEffect(colorMode, bgURL, {
+  deep: true,
+  immediate: true,
+});
+</script>
 
 <template>
   <div id="app">
@@ -11,7 +25,8 @@
 
 <style scoped>
 #app {
-  @apply flex h-full w-full flex-col bg-blue-500 transition-colors dark:bg-gray-900;
+  @apply flex h-full w-full flex-col transition-colors;
+  background: v-bind(bgURL);
 }
 
 .content {

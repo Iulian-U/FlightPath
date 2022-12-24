@@ -17,7 +17,7 @@ a {
 }
 
 p {
-  @apply ml-1 text-2xl font-bold tracking-normal text-sky-600 antialiased dark:text-white;
+  @apply ml-1 text-2xl font-bold tracking-normal text-sky-500 antialiased dark:text-white;
 }
 
 img {

@@ -38,15 +38,15 @@ import { Plane } from "lucide-vue-next";
 }
 
 #header {
-  @apply flex w-full flex-col items-center justify-between rounded-tr-md rounded-tl-md bg-white dark:border-l dark:border-t dark:border-r dark:border-blue-800 dark:bg-gray-900 dark:text-white lg:flex-row;
+  @apply flex w-full flex-col items-center justify-between rounded-tr-md rounded-tl-md border border-gray-500 border-opacity-50  lg:flex-row;
 }
 
 #header h2 {
-  @apply text-2xl font-medium text-gray-600 dark:text-white;
+  @apply text-2xl font-medium text-white;
 }
 
 #header p {
-  @apply text-gray-500;
+  @apply text-white;
 }
 
 #header div {
@@ -58,30 +58,38 @@ import { Plane } from "lucide-vue-next";
 }
 
 #header .icon {
-  @apply mx-6 h-7 h-full w-7 fill-gray-700 py-4 dark:fill-white lg:py-0;
+  @apply mx-6 h-7 h-full w-7 fill-gray-300 py-4  lg:py-0;
 }
 
 #header .airline-info {
-  @apply h-full w-full items-center rounded-tl-md rounded-tr-md bg-gray-100 px-0 py-6 dark:bg-transparent lg:w-auto lg:items-start lg:rounded-tl-md lg:px-6 lg:py-0;
+  @apply h-full w-full items-center rounded-tl-md  bg-gradient-to-tr from-indigo-500 via-indigo-600 to-blue-600 px-0 py-6 lg:w-auto lg:items-start lg:rounded-tl-md lg:px-6 lg:py-0;
 }
 
 #header .travel-info {
   @apply w-full flex-col items-center justify-around py-6 lg:mt-0 lg:mb-0 lg:flex lg:w-auto lg:flex-row lg:py-0;
 }
 
+#header .travel-info .airport h2 {
+  @apply text-gray-300;
+}
+
+#header .travel-info .airport p {
+  @apply text-cyan-400;
+}
+
 #header .flight-status {
-  @apply w-full flex-col items-center justify-center rounded-tr-none bg-emerald-400 px-6 py-4 dark:bg-transparent lg:w-auto lg:items-start lg:rounded-tr-md;
+  @apply w-full flex-col items-center justify-center rounded-tr-none bg-gradient-to-tr from-green-400 via-green-500 to-green-600 px-6 py-4  lg:w-auto lg:items-start lg:rounded-tr-md;
 }
 
 #header .flight-status h2 {
-  @apply text-white dark:text-emerald-400;
+  @apply text-white;
 }
 
 #header .flight-status p {
-  @apply text-white dark:text-emerald-400;
+  @apply text-white;
 }
 
 #body {
-  @apply bg-white bg-opacity-30 bg-opacity-5 blur-md dark:h-40 dark:border-l dark:border-r dark:border-b dark:border-blue-800;
+  @apply bg-white bg-opacity-30 bg-opacity-5 blur-md;
 }
 </style>

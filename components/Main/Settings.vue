@@ -22,33 +22,7 @@ import { Settings, Monitor, Sun, Moon } from "lucide-vue-next";
       <MenuItems class="menu-items">
         <div class="py-2">
           <MenuItem class="menu-item">
-            <FeaturesThemeButton :title="'System Theme'" :color="'system'">
-              <template #btnIcon>
-                <span class="icon-container">
-                  <Monitor class="icon" />
-                </span>
-              </template>
-            </FeaturesThemeButton>
-          </MenuItem>
-
-          <MenuItem class="menu-item">
-            <FeaturesThemeButton :title="'Light Theme'" :color="'light'">
-              <template #btnIcon>
-                <span class="icon-container">
-                  <Sun class="icon" />
-                </span>
-              </template>
-            </FeaturesThemeButton>
-          </MenuItem>
-
-          <MenuItem class="menu-item">
-            <FeaturesThemeButton :title="'Dark Theme'" :color="'dark'">
-              <template #btnIcon>
-                <span class="icon-container">
-                  <Moon class="icon" />
-                </span>
-              </template>
-            </FeaturesThemeButton>
+            <p>Test</p>
           </MenuItem>
         </div>
       </MenuItems>
@@ -58,7 +32,7 @@ import { Settings, Monitor, Sun, Moon } from "lucide-vue-next";
 
 <style scoped>
 .menu-button {
-  @apply inline-flex w-full justify-center rounded-md bg-white p-3 text-base font-medium text-sky-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75 dark:border dark:border-blue-800 dark:bg-gray-900 dark:text-white;
+  @apply inline-flex w-full justify-center rounded-md bg-gradient-to-r from-blue-500 to-blue-600 p-3 text-base font-medium text-white focus:outline-none;
 }
 
 .menu-items {

@@ -27,7 +27,41 @@ import { Plane } from "lucide-vue-next";
       </div>
     </div>
     <div id="body">
-      <p>Test</p>
+      <div class="flight-info">
+        <span class="badge">Departure</span>
+        <div class="airport-name">
+          <h2>Los Angeles International</h2>
+          <p>IATA: LAX</p>
+        </div>
+        <div class="schedule-info">
+          <div class="scheduled">
+            <h2>Scheduled</h2>
+            <p>2022-12-25 23:00</p>
+          </div>
+          <div class="estimated">
+            <h2>Estimated</h2>
+            <p>2022-12-25 23:00</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flight-info">
+        <span class="badge">Arrival</span>
+        <div class="airport-name">
+          <h2>Logan International</h2>
+          <p>IATA: BOS</p>
+        </div>
+        <div class="schedule-info">
+          <div class="scheduled">
+            <h2>Scheduled</h2>
+            <p>2022-12-25 23:00</p>
+          </div>
+          <div class="estimated">
+            <h2>Estimated</h2>
+            <p>2022-12-25 23:00</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -90,6 +124,46 @@ import { Plane } from "lucide-vue-next";
 }
 
 #body {
-  @apply bg-white bg-opacity-30 bg-opacity-5 blur-md;
+  @apply mt-2 flex flex-row  justify-between border border-gray-500 border-opacity-50 bg-black bg-opacity-20 blur-sm;
+}
+
+#body hr {
+  @apply my-auto h-full border border-gray-500 border-opacity-40;
+}
+
+#body .flight-info {
+  @apply flex w-full flex-col items-center justify-center  py-4;
+}
+
+#body .badge {
+  @apply inline-flex items-center rounded bg-blue-100 px-5 py-2 text-xs font-medium text-blue-800;
+}
+
+#body .airport-name {
+  @apply flex flex-col items-center justify-center py-4;
+}
+
+#body .airport-name h2 {
+  @apply text-xl text-gray-300;
+}
+
+#body .airport-name p {
+  @apply text-sm text-cyan-400;
+}
+
+#body .schedule-info {
+  @apply flex flex-row items-center;
+}
+#body .schedule-info h2 {
+  @apply font-semibold text-gray-300;
+}
+
+#body .schedule-info p {
+  @apply text-sm font-thin  text-gray-300;
+}
+
+#body .schedule-info .scheduled,
+.estimated {
+  @apply flex flex-col items-center justify-center border border-gray-500 border-opacity-50 px-4 py-2;
 }
 </style>

@@ -17,18 +17,18 @@ import { Search } from "lucide-vue-next";
 }
 
 .input-container input {
-  @apply sm:w-250 h-15 w-full rounded-tl-md rounded-bl-md text-center text-base shadow-md outline-none dark:border dark:border-blue-800 dark:bg-gray-900 dark:text-white sm:text-xl;
+  @apply sm:w-250 h-15 w-full rounded-tl-md rounded-bl-md border border-gray-500 border-opacity-50 bg-transparent text-center text-base  text-white outline-none sm:text-xl;
 }
 
 .input-container input::placeholder {
-  @apply opacity-45 text-gray-600 dark:opacity-100;
+  @apply opacity-45 text-white;
 }
 
 .input-container .submit-button {
-  @apply w-15 h-15 flex  items-center justify-center rounded-tr-md rounded-br-md bg-red-400 text-white shadow-md dark:border dark:border-red-400 dark:bg-gray-900;
+  @apply w-15 h-15 flex  items-center justify-center rounded-tr-md rounded-br-md bg-gradient-to-r from-blue-500 to-blue-600 text-white;
 }
 
 #wrapper .input-container .submit-button .icon {
-  @apply h-8 w-8 dark:text-red-400;
+  @apply h-8 w-8;
 }
 </style>

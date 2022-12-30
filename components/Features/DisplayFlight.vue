@@ -33,6 +33,7 @@ const flight = useFlightStore();
         <h2>{{ flight.flightResult.status != null ? flight.flightResult.status : "N/A" }}</h2>
       </div>
     </div>
+
     <div id="body">
       <div class="flight-info">
         <span class="badge">Departure</span>
@@ -98,6 +99,8 @@ const flight = useFlightStore();
         </div>
       </div>
     </div>
+
+    <div id="footer"></div>
   </div>
 </template>
 

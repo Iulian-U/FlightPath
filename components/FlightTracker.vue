@@ -10,7 +10,7 @@
 <style scoped>
 #wrapper {
   @apply flex h-full w-full flex-col items-center justify-center;
-  background-image: url("images/world-map-dark.png");
+  background-image: url("../public/images/world-map-dark.png");
   background-position: center;
   background-size: cover;
 }

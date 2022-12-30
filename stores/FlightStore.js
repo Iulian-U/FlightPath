@@ -35,17 +35,17 @@ export const useFlightStore = defineStore("flightStore", {
         .then((response) => {
           switch (response.data.error && response.data.error.code) {
             case "not_found":
-              errorMessage.state = true;
-              errorMessage.message = "Sorry! We were not able to find this flight!";
+              this.errorMessage.state = true;
+              this.errorMessage.message = "Sorry! We were not able to find this flight!";
               this.pending = false;
-              console.log(errorMessage.message);
+              console.log(this.errorMessage.message);
               console.log(response);
               break;
             case "wrong_params":
-              errorMessage.state = true;
-              errorMessage.message = "Please enter a valid flight Number";
+              this.errorMessage.state = true;
+              this.errorMessage.message = "Please enter a valid flight Number";
               this.pending = false;
-              console.log(errorMessage.message);
+              console.log(this.errorMessage.message);
               break;
             default:
               console.log(response);

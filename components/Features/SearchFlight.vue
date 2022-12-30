@@ -1,19 +1,26 @@
 <script setup>
 import { Search } from "lucide-vue-next";
+const flight = useFlightStore();
+let newIataFlight = ref("");
+const handleSubmit = () => {
+  flight.flight_iata = newIataFlight;
+  flight.fetchFlightData();
+  newIataFlight.value = "";
+};
 </script>
 
 <template>
-  <div class="input-container">
-    <input type="text" placeholder="Search for a flight.." />
+  <form class="input-container" @submit.prevent="handleSubmit()">
+    <input type="text" placeholder="Search for a flight.." v-model="newIataFlight" />
     <button class="submit-button">
       <Search class="icon" />
     </button>
-  </div>
+  </form>
 </template>
 
 <style scoped>
 .input-container {
-  @apply relative z-10 flex w-full items-center justify-center px-4;
+  @apply z-10 flex w-full items-center justify-center px-4;
 }
 
 .input-container input {

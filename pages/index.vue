@@ -11,11 +11,11 @@
 
 <style scoped>
 #app {
-  @apply flex h-full w-full flex-col bg-gray-900;
+  @apply flex w-full flex-col bg-gray-900;
   background-image: url("/images/dots-bg.png");
 }
 
 .content {
-  @apply flex h-full w-full items-center justify-center;
+  @apply mt-10 flex h-full w-full items-center justify-center bg-gray-900;
 }
 </style>

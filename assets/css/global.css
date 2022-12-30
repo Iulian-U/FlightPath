@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: inherit;
+}
+
 html,
 body,
 #__nuxt,
 #__layout {
   height: 100% !important;
   width: 100% !important;
+  max-width: 100% !important;
+  max-height: 100% !important;
+  background-image: url("/public/images/dots-bg.png");
+  background-color: #111827;
 }
 
 body {

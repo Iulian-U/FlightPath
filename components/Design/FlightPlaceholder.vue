@@ -64,6 +64,72 @@ import { Plane } from "lucide-vue-next";
       </div>
     </div>
   </div>
+
+  <div id="container">
+    <div id="header">
+      <div class="airline-info">
+        <h2>
+          {{ flight.flightResult.flight_iata != null ? flight.flightResult.flight_iata : "N/A" }}
+        </h2>
+        <p>
+          {{ flight.flightResult.airline_name != null ? flight.flightResult.airline_name : "N/A" }}
+        </p>
+      </div>
+
+      <div class="travel-info">
+        <div class="airport">
+          <h2>{{ flight.flightResult.dep_iata }}</h2>
+          <p>{{ flight.flightResult.dep_name }}</p>
+        </div>
+        <Plane class="icon fly-airplane" stroke-width="1" />
+        <div class="airport">
+          <h2>{{ flight.flightResult.arr_iata }}</h2>
+          <p>{{ flight.flightResult.arr_name }}</p>
+        </div>
+      </div>
+      <div class="flight-status">
+        <p>Status</p>
+        <h2>{{ flight.flightResult.status }}</h2>
+      </div>
+    </div>
+    <div id="body">
+      <div class="flight-info">
+        <span class="badge">Departure</span>
+        <div class="airport-name">
+          <h2>{{ flightInfo.flightResult.dep_name }}</h2>
+          <p>IATA: {{ flightInfo.flightResult.dep_iata }}</p>
+        </div>
+        <div class="schedule-info">
+          <div class="scheduled">
+            <h2>Scheduled</h2>
+            <p>2022-12-25 23:00</p>
+          </div>
+          <div class="estimated">
+            <h2>Estimated</h2>
+            <p>2022-12-25 23:00</p>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <div class="flight-info">
+        <span class="badge">Arrival</span>
+        <div class="airport-name">
+          <h2>{{ flightInfo.flightResult.arr_name }}</h2>
+          <p>IATA: {{ flightInfo.flightResult.arr_iata }}</p>
+        </div>
+        <div class="schedule-info">
+          <div class="scheduled">
+            <h2>Scheduled</h2>
+            <p>2022-12-25 23:00</p>
+          </div>
+          <div class="estimated">
+            <h2>Estimated</h2>
+            <p>2022-12-25 23:00</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style>

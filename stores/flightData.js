@@ -1,45 +1,61 @@
 import axios from "axios";
 
 export const useFlightData = defineStore("flightData", () => {
-  const uri = "https://airlabs.co/api/v9/flights";
+  const flightURI = "https://airlabs.co/api/v9/flight";
   const api_key = "973900be-3312-4dd3-aee4-277b4b493460";
-  let flightInfo = null;
-  const flight_iata = "QR756";
-  const iata_code = "ATL";
+  let flight_iata = "XXXX";
 
-  //   const fetchFlightData = async () => {
-  //     try {
-  //       const { data } = await axios.get(uri, { params: { api_key, flight_iata } }).then()
-
-  //       const { airportData } = await axios.get(uri, { params: { api_key, iata_code} });
-  //       console.log(airportData);
-  //     } catch (error) {
-  //       console.log(error);
-  //     }
-  //   };
-
-  const requestOne = axios.get(uri);
-  const requestTwo = axios.get(uri);
-
-  const fetchFlightData = async () => {
-    await axios.all([requestOne, requestTwo]).then(
-      axios.spread((...responses) => {
-        const responseOne = responses[0];
-        const responseTwo = responses[1];
-        console.log(responses);
-      })
-    );
+  let flightResult = {
+    flight_iata: "UXGDS",
+    dep_iata: "LAX",
+    arr_iata: "BOS",
+    status: "Airborne",
+    airline_name: "UA - Unites Airlines",
+    dep_name: "Los Angeles Int.",
+    arr_name: "Logan Int.",
   };
 
+  let pending = false;
+
+  let errorMessage = {
+    state: false,
+    message: "",
+  };
+
+  async function fetchFlightData() {
+    this.pending = true;
+    await axios.get(flightURI, { params: { api_key, flight_iata } }).then((response) => {
+      switch (response.data.error && response.data.error.code) {
+        case "not_found":
+          errorMessage.state = true;
+          errorMessage.message = "Sorry! We were not able to find this flight!";
+          this.pending = false;
+          console.log(errorMessage.message);
+          console.log(response);
+          break;
+        case "wrong_params":
+          errorMessage.state = true;
+          errorMessage.message = "Please enter a valid flight Number";
+          this.pending = false;
+          console.log(errorMessage.message);
+          break;
+        default:
+          console.log(response);
+          this.flightResult = response.data.response;
+          this.pending = false;
+          break;
+      }
+    });
+  }
+
   return {
-    flightInfo,
-    uri,
-    api_key,
-    flight_iata,
+    flightResult,
     fetchFlightData,
+    pending,
+    flight_iata,
   };
 });
 
-// if (import.meta.hot) {
-//   import.meta.hot.accept(acceptHMRUpdate(useFlightData, import.meta.hot));
-// }
+if (import.meta.hot) {
+  import.meta.hot.accept(acceptHMRUpdate(useFlightData, import.meta.hot));
+}

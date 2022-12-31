@@ -14,6 +14,9 @@
 }
 
 .content {
-  @apply mt-10 flex h-full w-full items-center justify-center bg-gray-900;
+  @apply mt-10 flex h-full w-full items-center justify-center lg:bg-contain bg-cover ;
+  background-image: url("../public/images/world-map-dark.png");
+  background-position: center;
+  background-repeat: no-repeat;
 }
 </style>

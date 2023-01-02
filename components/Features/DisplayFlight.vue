@@ -124,7 +124,7 @@ const arr_gate = computed(() => flight.flightResult.arr_gate || "N/A ");
 
 <style scoped>
 #container {
-  @apply lg:w-265 relative mt-6 flex w-full flex-col  px-4 lg:px-0;
+  @apply lg:w-265 relative mt-6 flex w-full flex-col px-4 lg:px-0;
 }
 
 header {

@@ -10,5 +10,6 @@
 <style scoped>
 #wrapper {
   @apply flex h-full w-full flex-col items-center justify-center;
+
 }
 </style>

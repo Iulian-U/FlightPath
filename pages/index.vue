@@ -1,5 +1,3 @@
-<script setup></script>
-
 <template>
   <div id="app">
     <MainNavbar class="z-20" />
@@ -16,6 +14,10 @@
 }
 
 .content {
+
   @apply mt-10 flex h-full w-full items-center justify-center;
+
+  @apply mt-10 flex h-full w-full items-center justify-center lg:bg-contain bg-cover ;
+
 }
 </style>

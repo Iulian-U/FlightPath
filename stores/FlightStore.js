@@ -19,6 +19,10 @@ export const useFlightStore = defineStore("flightStore", {
       dep_time: "0000",
       dep_estimated: "0000",
       dep_actual: "0000",
+      dep_terminal: "22",
+      arr_terminal: "12",
+      dep_gate: "B25",
+      arr_gate: "A98",
     },
     pending: false,
     errorMessage: {

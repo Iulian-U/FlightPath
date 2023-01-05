@@ -1,7 +1,11 @@
 <script setup>
 import { Plane } from "lucide-vue-next";
-
 const flight = useFlightStore();
+const config = useRuntimeConfig();
+
+onMounted(() => {
+  flight.api_key = config.api;
+});
 
 const flight_iata = computed(() => flight.flightResult.flight_iata || "N/A");
 const airline_name = computed(() => flight.flightResult.airline_name || "N/A");

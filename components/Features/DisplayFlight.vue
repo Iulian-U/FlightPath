@@ -186,7 +186,7 @@ const reg_number = computed(() => flight.flightResult.reg_number || "N/A ");
 
 <style scoped>
 #container {
-  @apply lg:w-265 relative mt-6 flex w-full flex-col  px-4 lg:px-0;
+  @apply lg:w-265 relative mt-6 flex w-full flex-col px-4 lg:px-0;
 }
 
 header {

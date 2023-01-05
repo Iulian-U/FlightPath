@@ -14,7 +14,7 @@ body,
   width: 100% !important;
   max-width: 100% !important;
   max-height: 100% !important;
-  background-image: url("/public/images/dots-bg.png");
+  background-image: url("/images/dots-bg.png");
   background-color: #111827;
 }
 

@@ -3,6 +3,11 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["stores"],
   },
+  runtimeConfig: {
+    public: {
+      api: process.env.AIRLABS_API_KEY,
+    },
+  },
   modules: [
     "@nuxtjs/color-mode",
     "nuxt-windicss",

@@ -18,6 +18,16 @@
       </div>
     </div>
   </div>
+
+  <div id="container">
+    <div class="body animate-pulse">
+      <div class="side animate-pulse">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <style scoped>

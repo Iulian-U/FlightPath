@@ -1,7 +1,7 @@
 <script setup></script>
 
 <template>
-  <a>
+  <a href="">
     <img src="/images/plane-logo-color.png" alt="logo" />
     <p>FlightPath</p>
   </a>

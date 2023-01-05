@@ -1,6 +1,6 @@
 <script setup>
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
-import { Settings, Monitor, Sun, Moon } from "lucide-vue-next";
+import { Settings, Github } from "lucide-vue-next";
 </script>
 
 <template>
@@ -22,7 +22,12 @@ import { Settings, Monitor, Sun, Moon } from "lucide-vue-next";
       <MenuItems class="menu-items">
         <div class="py-2">
           <MenuItem class="menu-item">
-            <p>Test</p>
+            <div class="link">
+              <a href="https://github.com/Iulian-U/FlightPath" target="_blank">
+                <Github />
+                <p>Github</p>
+              </a>
+            </div>
           </MenuItem>
         </div>
       </MenuItems>
@@ -43,11 +48,15 @@ import { Settings, Monitor, Sun, Moon } from "lucide-vue-next";
   @apply hover: bg-light-700 text-gray-400 transition-colors hover:text-gray-600 dark:text-white dark:hover:bg-gray-800 dark:hover:text-white;
 }
 
-.menu-items .icon-container {
-  @apply flex h-full items-center;
+.link {
+  @apply px-2 py-2 hover:cursor-pointer;
 }
 
-.menu-items .icon-container .icon {
-  @apply h-5 w-5;
+.link a {
+  @apply flex;
+}
+
+.link a p {
+  @apply ml-2;
 }
 </style>

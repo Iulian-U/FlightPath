@@ -5,9 +5,13 @@ const flight = useFlightStore();
 
 const flight_iata = computed(() => flight.flightResult.flight_iata || "N/A");
 const airline_name = computed(() => flight.flightResult.airline_name || "N/A");
+const airline_iata = computed(() => flight.flightResult.airline_iata || "N/A");
+const airline_icao = computed(() => flight.flightResult.airline_icao || "N/A");
 const dep_iata = computed(() => flight.flightResult.dep_iata || "N/A");
+const dep_icao = computed(() => flight.flightResult.dep_icao || "N/A");
 const dep_name = computed(() => flight.flightResult.dep_name || "N/A ");
 const arr_iata = computed(() => flight.flightResult.arr_iata || "N/A ");
+const arr_icao = computed(() => flight.flightResult.arr_icao || "N/A ");
 const arr_name = computed(() => flight.flightResult.arr_name || "N/A ");
 const status = computed(() => flight.flightResult.status || "N/A ");
 const dep_time = computed(() => flight.flightResult.dep_time || "N/A ");
@@ -20,6 +24,12 @@ const dep_terminal = computed(() => flight.flightResult.dep_terminal || "N/A ");
 const arr_terminal = computed(() => flight.flightResult.arr_terminal || "N/A ");
 const dep_gate = computed(() => flight.flightResult.dep_gate || "N/A ");
 const arr_gate = computed(() => flight.flightResult.arr_gate || "N/A ");
+const lat = computed(() => flight.flightResult.lat || "N/A ");
+const lng = computed(() => flight.flightResult.lng || "N/A");
+const alt = computed(() => flight.flightResult.alt || "N/A");
+const manufacturer = computed(() => flight.flightResult.manufacturer || "N/A ");
+const model = computed(() => flight.flightResult.model || "N/A");
+const reg_number = computed(() => flight.flightResult.reg_number || "N/A ");
 </script>
 
 <template>
@@ -53,7 +63,10 @@ const arr_gate = computed(() => flight.flightResult.arr_gate || "N/A ");
         <span class="badge">Departure</span>
         <div class="airport-name">
           <h2>{{ dep_name }}</h2>
-          <p>IATA: {{ dep_iata }}</p>
+          <span>
+            <p>IATA: {{ dep_iata }}</p>
+            <p>ICAO: {{ dep_icao }}</p>
+          </span>
         </div>
         <div class="schedule-info">
           <div class="scheduled">
@@ -87,7 +100,10 @@ const arr_gate = computed(() => flight.flightResult.arr_gate || "N/A ");
         <span class="badge">Arrival</span>
         <div class="airport-name">
           <h2>{{ arr_name }}</h2>
-          <p>IATA: {{ arr_iata }}</p>
+          <span>
+            <p>IATA: {{ arr_iata }}</p>
+            <p>ICAO: {{ arr_icao }}</p>
+          </span>
         </div>
         <div class="schedule-info">
           <div class="scheduled">
@@ -118,7 +134,53 @@ const arr_gate = computed(() => flight.flightResult.arr_gate || "N/A ");
       </div>
     </main>
 
-    <footer></footer>
+    <footer>
+      <div>
+        <span class="badge">Aircraft Location</span>
+        <span
+          ><p class="title">Latitude:</p>
+          <p class="info">{{ lat }}</p></span
+        >
+        <span
+          ><p class="title">Longitude:</p>
+          <p class="info">{{ lng }}</p></span
+        >
+        <span
+          ><p class="title">Altitude:</p>
+          <p class="info">{{ alt }}</p></span
+        >
+      </div>
+      <div>
+        <span class="badge">Aircraft Type</span>
+        <span
+          ><p class="title">Manufacturer:</p>
+          <p class="info">{{ manufacturer }}</p></span
+        >
+        <span
+          ><p class="title">Model:</p>
+          <p class="info">{{ model }}</p></span
+        >
+        <span
+          ><p class="title">Registration:</p>
+          <p class="info">{{ reg_number }}</p></span
+        >
+      </div>
+      <div>
+        <span class="badge">Airline</span>
+        <span
+          ><p class="title">Name:</p>
+          <p class="info">{{ airline_name }}</p></span
+        >
+        <span
+          ><p class="title">IATA:</p>
+          <p class="info">{{ airline_iata }}</p></span
+        >
+        <span
+          ><p class="title">ICAO:</p>
+          <p class="info">{{ airline_icao }}</p></span
+        >
+      </div>
+    </footer>
   </div>
 </template>
 
@@ -207,6 +269,10 @@ main .airport-name p {
   @apply text-sm text-cyan-400;
 }
 
+main .airport-name span {
+  @apply w-50 flex justify-around;
+}
+
 main .schedule-info {
   @apply flex flex-col items-center lg:flex-row;
 }
@@ -241,5 +307,25 @@ main .location-info div .info {
 
 main .location-info .gate {
   @apply mt-4 lg:mt-0;
+}
+
+footer {
+  @apply mb-2 mt-2 flex flex-col items-center justify-around  border border-gray-500 border-opacity-50 bg-black bg-opacity-20 blur-sm lg:flex-row;
+}
+
+footer div {
+  @apply flex w-auto flex-col  py-4;
+}
+
+footer div .badge {
+  @apply w-35 mb-4 flex justify-center  rounded border border-blue-100 bg-blue-50 bg-opacity-10 p-1 text-sm font-medium text-blue-100;
+}
+
+footer div span {
+  @apply flex py-2  text-sm text-gray-100;
+}
+
+footer div span .title {
+  @apply mr-2 text-sm font-semibold;
 }
 </style>

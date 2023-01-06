@@ -278,7 +278,7 @@ main .airport-name span {
 }
 
 main .schedule-info {
-  @apply flex flex-col items-center lg:flex-row;
+  @apply flex  flex-col items-center  lg:flex-row;
 }
 main .schedule-info h2 {
   @apply font-semibold text-gray-300;
@@ -291,7 +291,7 @@ main .schedule-info p {
 main .schedule-info .scheduled,
 .estimated,
 .actual {
-  @apply flex w-40 flex-col items-center justify-center border border-gray-500 border-opacity-50 px-4 py-2;
+  @apply flex w-full flex-col items-center justify-center border border-gray-500 border-opacity-50  px-4 py-2 lg:w-40;
 }
 
 main .location-info {

@@ -54,11 +54,11 @@ const setLocale = (lang) => {
 }
 
 .menu-items {
-  @apply absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 blur-md focus:outline-none dark:border dark:border-blue-800 dark:bg-gray-900 dark:bg-opacity-90;
+  @apply absolute right-0 mt-2 w-56 origin-top-right divide-y divide-gray-100 rounded-md  border border-blue-800 bg-gray-900 bg-opacity-90 shadow-lg ring-1 ring-black ring-opacity-5 blur-md focus:outline-none;
 }
 
 .menu-item {
-  @apply hover: bg-light-700 text-gray-400 transition-colors hover:text-gray-600 dark:text-white dark:hover:bg-gray-800 dark:hover:text-white;
+  @apply hover: bg-light-700 text-gray-400 text-white transition-colors hover:bg-gray-800 hover:text-gray-600 hover:text-white;
 }
 
 .link {

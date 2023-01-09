@@ -1,0 +1,22 @@
+{
+  "langSelect": "Selecteaza limba:",
+  "flightSearch": "Introdu codul IATA (ex. KE178)",
+  "status": "Status",
+  "departure": "Plecare",
+  "arrival": "Sosire",
+  "scheduled": "Programat",
+  "estimated": "Estimat",
+  "actual": "Actual",
+  "terminal": "Terminal",
+  "gate": "Poarta",
+  "aircraftLocation": "Locatia Aeronavei",
+  "aircraftType": "Tipul Aeronavei",
+  "airline": "Companie Aeriana",
+  "latitude": "Latitudine:",
+  "longitude": "Longitudine:",
+  "altitude": "Altitudine:",
+  "manufacturer": "Producator:",
+  "model": "Model:",
+  "registration": "Numar de inregistrare:",
+  "name": "Nume:"
+}

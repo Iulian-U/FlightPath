@@ -1,0 +1,22 @@
+{
+  "langSelect": "Language Select:",
+  "flightSearch": "Enter IATA Flight (i.e. KE178)",
+  "status": "Status",
+  "departure": "Departure",
+  "arrival": "Arrival",
+  "scheduled": "Scheduled",
+  "estimated": "Estimated",
+  "actual": "Actual",
+  "terminal": "Terminal",
+  "gate": "Gate",
+  "aircraftLocation": "Aircraft Location",
+  "aircraftType": "Aircraft Type",
+  "airline": "Airline",
+  "latitude": "Latitude:",
+  "longitude": "Longitude:",
+  "altitude": "Altitude:",
+  "manufacturer": "Manufacturer:",
+  "model": "Model:",
+  "registration": "Registration:",
+  "name": "Name:"
+}

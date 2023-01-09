@@ -1,6 +1,11 @@
 <script setup>
 import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
 import { Settings, Github } from "lucide-vue-next";
+
+const { locale } = useI18n();
+const setLocale = (lang) => {
+  locale.value = lang;
+};
 </script>
 
 <template>
@@ -21,12 +26,20 @@ import { Settings, Github } from "lucide-vue-next";
     >
       <MenuItems class="menu-items">
         <div class="py-2">
+          <h2 class="px-2 py-2 font-bold text-white">{{ $t("langSelect") }}</h2>
           <MenuItem class="menu-item">
             <div class="link">
-              <a href="https://github.com/Iulian-U/FlightPath" target="_blank">
-                <Github />
-                <p>Github</p>
-              </a>
+              <p @click="setLocale('en')">English</p>
+            </div>
+          </MenuItem>
+          <MenuItem class="menu-item">
+            <div class="link">
+              <p @click="setLocale('ro')">Romanian</p>
+            </div>
+          </MenuItem>
+          <MenuItem class="menu-item">
+            <div class="link">
+              <p @click="setLocale('it')">Italian</p>
             </div>
           </MenuItem>
         </div>

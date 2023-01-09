@@ -1,0 +1,22 @@
+{
+  "langSelect": "Seleziona lingua:",
+  "flightSearch": "Introduci codice IATA (es. KE178)",
+  "status": "Stato",
+  "departure": "Partenza",
+  "arrival": "Arrivo",
+  "scheduled": "Programmato",
+  "estimated": "Stimato",
+  "actual": "Attuale",
+  "terminal": "Terminale",
+  "gate": "Varco",
+  "aircraftLocation": "Posizione",
+  "aircraftType": "Tipo di aeromobile",
+  "airline": "Compagnia aerea",
+  "latitude": "Latitudine:",
+  "longitude": "Longitudine:",
+  "altitude": "Altitudine:",
+  "manufacturer": "Produttore:",
+  "model": "Modello:",
+  "registration": "Registrazione:",
+  "name": "Nome:"
+}

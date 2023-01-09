@@ -57,14 +57,14 @@ const reg_number = computed(() => flight.flightResult.reg_number || "N/A ");
         </div>
       </div>
       <div class="flight-status">
-        <p>Status</p>
+        <p>{{ $t("status") }}</p>
         <h2>{{ status }}</h2>
       </div>
     </header>
 
     <main>
       <div class="flight-info">
-        <span class="badge">Departure</span>
+        <span class="badge">{{ $t("departure") }}</span>
         <div class="airport-name">
           <h2>{{ dep_name }}</h2>
           <span>
@@ -74,17 +74,17 @@ const reg_number = computed(() => flight.flightResult.reg_number || "N/A ");
         </div>
         <div class="schedule-info">
           <div class="scheduled">
-            <h2>Scheduled</h2>
+            <h2>{{ $t("scheduled") }}</h2>
             <p>{{ dep_time }}</p>
           </div>
           <div class="estimated">
-            <h2>Estimated</h2>
+            <h2>{{ $t("estimated") }}</h2>
             <p>
               {{ dep_estimated }}
             </p>
           </div>
           <div class="actual">
-            <h2>Actual</h2>
+            <h2>{{ $t("actual") }}</h2>
             <p>
               {{ dep_actual }}
             </p>
@@ -92,16 +92,17 @@ const reg_number = computed(() => flight.flightResult.reg_number || "N/A ");
         </div>
         <div class="location-info">
           <div class="terminal">
-            <span class="title">Terminal</span> <span class="info">{{ dep_terminal }}</span>
+            <span class="title">{{ $t("terminal") }}</span>
+            <span class="info">{{ dep_terminal }}</span>
           </div>
           <div class="gate">
-            <span class="title">Gate</span> <span class="info">{{ dep_gate }}</span>
+            <span class="title">{{ $t("gate") }}</span> <span class="info">{{ dep_gate }}</span>
           </div>
         </div>
       </div>
       <hr />
       <div class="flight-info">
-        <span class="badge">Arrival</span>
+        <span class="badge">{{ $t("arrival") }}</span>
         <div class="airport-name">
           <h2>{{ arr_name }}</h2>
           <span>
@@ -111,17 +112,17 @@ const reg_number = computed(() => flight.flightResult.reg_number || "N/A ");
         </div>
         <div class="schedule-info">
           <div class="scheduled">
-            <h2>Scheduled</h2>
+            <h2>{{ $t("scheduled") }}</h2>
             <p>{{ arr_time }}</p>
           </div>
           <div class="estimated">
-            <h2>Estimated</h2>
+            <h2>{{ $t("estimated") }}</h2>
             <p>
               {{ arr_estimated }}
             </p>
           </div>
           <div class="actual">
-            <h2>Actual</h2>
+            <h2>{{ $t("actual") }}</h2>
             <p>
               {{ arr_actual }}
             </p>
@@ -129,10 +130,11 @@ const reg_number = computed(() => flight.flightResult.reg_number || "N/A ");
         </div>
         <div class="location-info">
           <div class="terminal">
-            <span class="title">Terminal</span> <span class="info">{{ arr_terminal }}</span>
+            <span class="title">{{ $t("terminal") }}</span>
+            <span class="info">{{ arr_terminal }}</span>
           </div>
           <div class="gate">
-            <span class="title">Gate</span> <span class="info">{{ arr_gate }}</span>
+            <span class="title">{{ $t("gate") }}</span> <span class="info">{{ arr_gate }}</span>
           </div>
         </div>
       </div>
@@ -140,39 +142,39 @@ const reg_number = computed(() => flight.flightResult.reg_number || "N/A ");
 
     <footer>
       <div>
-        <span class="badge">Aircraft Location</span>
+        <span class="badge">{{ $t("aircraftLocation") }}</span>
         <span
-          ><p class="title">Latitude:</p>
+          ><p class="title">{{ $t("latitude") }}</p>
           <p class="info">{{ lat }}</p></span
         >
         <span
-          ><p class="title">Longitude:</p>
+          ><p class="title">{{ $t("longitude") }}</p>
           <p class="info">{{ lng }}</p></span
         >
         <span
-          ><p class="title">Altitude:</p>
+          ><p class="title">{{ $t("altitude") }}</p>
           <p class="info">{{ alt }}</p></span
         >
       </div>
       <div>
-        <span class="badge">Aircraft Type</span>
+        <span class="badge">{{ $t("aircraftType") }}</span>
         <span
-          ><p class="title">Manufacturer:</p>
+          ><p class="title">{{ $t("manufacturer") }}</p>
           <p class="info">{{ manufacturer }}</p></span
         >
         <span
-          ><p class="title">Model:</p>
+          ><p class="title">{{ $t("model") }}</p>
           <p class="info">{{ model }}</p></span
         >
         <span
-          ><p class="title">Registration:</p>
+          ><p class="title">{{ $t("registration") }}</p>
           <p class="info">{{ reg_number }}</p></span
         >
       </div>
       <div>
-        <span class="badge">Airline</span>
+        <span class="badge">{{ $t("airline") }}</span>
         <span
-          ><p class="title">Name:</p>
+          ><p class="title">{{ $t("name") }}</p>
           <p class="info">{{ airline_name }}</p></span
         >
         <span

@@ -11,7 +11,7 @@ const handleSubmit = () => {
 
 <template>
   <form class="input-container" @submit.prevent="handleSubmit()">
-    <input type="text" placeholder="Search for a flight.." v-model="newIataFlight" />
+    <input type="text" :placeholder="$t('flightSearch')" v-model="newIataFlight" />
     <button class="submit-button">
       <Search class="icon" />
     </button>

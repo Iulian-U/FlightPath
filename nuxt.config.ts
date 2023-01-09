@@ -1,4 +1,3 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   imports: {
     dirs: ["stores"],
@@ -11,6 +10,20 @@ export default defineNuxtConfig({
   modules: [
     "@nuxtjs/color-mode",
     "nuxt-windicss",
+    [
+      "@nuxtjs/i18n",
+      {
+        vueI18n: {
+          legacy: false,
+          locale: "en",
+          messages: {
+            en: require("./lang/en"),
+            it: require("./lang/it"),
+            ro: require("./lang/ro"),
+          },
+        },
+      },
+    ],
     [
       "@pinia/nuxt",
       {
